@@ -16,24 +16,26 @@ struct ContentView: View {
         let columns: Int = hSizeClass == .compact ? 2 : 3
         let rows: Int = albumVM.albumsObj.count / columns
         
-        return Group {
+        return NavigationView {
             if self.albumVM.albumsObj.count == 0 {
                 HStack {
                     Spacer()
                     Text("loading...")
                     Spacer()
                 }
-                
+                    .navigationBarTitle("Charting The SwiftUI", displayMode: .inline)
+                    .navigationBarHidden(true)
             } else {
                 GridStack(rows: rows, columns: columns){ row, col in
-                    AlbumCell( album: self.albumVM.albumsObj[(row*col) + row] )
-                    .onAppear(perform: {
-                        self.albumVM.fetchArt((row*col) + row)
-                    })
+                    AlbumCell(
+                        index: (row*col) + row,
+                        albumVM: self.albumVM
+                    )
                 }
+                    .navigationBarTitle("Charting The SwiftUI", displayMode: .inline)
             }
         }
-        .onAppear(perform: self.albumVM.fetchAlbums)
+            .onAppear(perform: self.albumVM.fetchAlbums)
     }
 }
 

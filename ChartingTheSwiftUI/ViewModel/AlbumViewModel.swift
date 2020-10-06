@@ -14,14 +14,20 @@ class AlbumViewModel: ObservableObject {
     var service: NetworkManager = NetworkManager.shared
     
     @Published private(set) var albumsObj = [AlbumObj]()
-    func fetchArt(_ index: Int){
+    func fetchArt(_ index: Int, _ isDetail: Bool = false, completion: @escaping (UIImage) -> ()){
         let album = self.albumsObj[index]
-        self.service.fetchRaw(originalUrl: album.artworkUrl100){
+        var url = album.artworkUrl100
+        if isDetail {
+            url = url.replacingOccurrences(of: "200x200", with: "1000x1000")
+        }
+            
+        self.service.fetchRaw(originalUrl: url){
             result in
-            guard let data = result else {return}
-            DispatchQueue.main.async {
-                self.albumsObj[index].image = UIImage(data: data)
-            }            
+            guard
+                let data = result,
+                let img = UIImage(data: data)
+            else {return}
+            completion(img)
         }
     }
     
