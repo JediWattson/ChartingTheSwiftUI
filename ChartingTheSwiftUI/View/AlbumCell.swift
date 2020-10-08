@@ -37,6 +37,18 @@ struct AlbumCell: View {
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
                     Spacer()
+                    HStack{
+                        Spacer()
+                        ZStack{
+                            Image(systemName: "heart.fill")
+                                .opacity(album.isLoved ? 1 : 0)
+                                .scaleEffect(album.isLoved ? 1.0 : 0.1)
+                                .animation(.linear)
+                            Image(systemName: "heart")
+                        }
+                            .foregroundColor(album.isLoved ? .red : .black)
+
+                    }
                 }
                 Spacer()
             }

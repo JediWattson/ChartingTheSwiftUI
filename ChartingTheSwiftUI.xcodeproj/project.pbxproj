@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C4112B8252EC920006101AF /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4112B7252EC920006101AF /* HeartButton.swift */; };
 		0C668A2A252C13EB00A05515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C668A29252C13EB00A05515 /* AppDelegate.swift */; };
 		0C668A2C252C13EB00A05515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C668A2B252C13EB00A05515 /* SceneDelegate.swift */; };
 		0C668A2F252C13EB00A05515 /* ChartingTheSwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C668A2D252C13EB00A05515 /* ChartingTheSwiftUI.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C4112B7252EC920006101AF /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		0C668A26252C13EB00A05515 /* ChartingTheSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartingTheSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C668A29252C13EB00A05515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C668A2B252C13EB00A05515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				0C668A30252C13EB00A05515 /* ContentView.swift */,
 				0C668A60252CB74900A05515 /* AlbumCell.swift */,
 				0C695A3D252D0740003D8C72 /* Detail.swift */,
+				0C4112B7252EC920006101AF /* HeartButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				0C668A31252C13EB00A05515 /* ContentView.swift in Sources */,
 				0C668A64252CB90300A05515 /* Manager.swift in Sources */,
 				0C668A2C252C13EB00A05515 /* SceneDelegate.swift in Sources */,
+				0C4112B8252EC920006101AF /* HeartButton.swift in Sources */,
 				0C668A6C252CBA0F00A05515 /* AlbumViewModel.swift in Sources */,
 				0C695A3E252D0740003D8C72 /* Detail.swift in Sources */,
 				0C668A61252CB74900A05515 /* AlbumCell.swift in Sources */,

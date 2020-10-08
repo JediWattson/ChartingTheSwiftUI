@@ -31,6 +31,11 @@ class AlbumViewModel: ObservableObject {
         }
     }
     
+    func setLoved(index: Int){
+        self.albumsObj[index].isLoved.toggle()
+        print(self.albumsObj[index].isLoved)
+    }
+    
     func fetchAlbums(){
         self.service.fetchDecodable(model: Query.self, originalUrl: albumsUrl){[weak self]
             results in
